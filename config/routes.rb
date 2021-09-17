@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :skills
     resources :grades
     resources :users
+    get '/tp_grades', to: 'grades#tp_grades'
   end
 end

@@ -5,6 +5,11 @@ class Api::GradesController < ApplicationController
      render json: grades
   end
 
+  def tp_grades
+     grades = Grade.tp_grades
+     render json: grades
+  end
+
   def create
     # we have to have the user_id and skill_id
     @grade = Grade.new(grade_params)
